@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 " >
       <input
         type="text"
         placeholder="Digite um usuário do GitHub"
