@@ -3,7 +3,7 @@
 # **Projeto 2 Avanti**
 
 ### **Descrição**
-Este projeto é uma aplicação React que utiliza a API do GitHub para buscar perfis de usuários. Ele foi desenvolvido como parte de um desafio técnico e inclui funcionalidades como busca de usuários, exibição de informações do perfil e mensagens de erro personalizadas. O design é responsivo e utiliza o TailwindCSS para estilização.
+Este projeto é uma aplicação React que utiliza a API do GitHub para buscar perfis de usuários. Ele foi desenvolvido como parte de um desafio técnico e inclui funcionalidades como busca de usuários, exibição de informações do perfil e mensagens de erro personalizadas. O design é css utiliza o TailwindCSS para estilização.
 ---
 ### **Importante:** O código não está totalmente responsivo e foi criado na resolução 1440x900.
 ---
@@ -75,11 +75,14 @@ export default {
 
 ### **Arquivo tailwind.config.js:**
 ```javascript
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customGray: "#1f1f1f",
+      },
+    },
   },
   plugins: [],
 };
