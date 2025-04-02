@@ -1,10 +1,5 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'src/styles/global.css'] }, // Ignora o arquivo global.css
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
