@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customGray: "#1f1f1f", // Adiciona a cor personalizada
+        customGray: "#1f1f1f",
       },
     },
   },
