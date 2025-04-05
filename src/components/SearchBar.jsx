@@ -1,11 +1,19 @@
 import { useState } from "react";
 
 const SearchBar = ({ onSearch, error }) => {
-  const [username, setUsername] = useState("");
+
+  const [username, setUsername] = useState("")
 
   const handleSearch = () => {
     if (username.trim()) {
       onSearch(username);
+      setHistory((previHistory) => [username, ...previHistory]);
+      setUsername("");
+    }
+  };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
     }
   };
 
@@ -23,6 +31,7 @@ const SearchBar = ({ onSearch, error }) => {
             className="w-full p-2 pr-10 rounded bg-white text-black"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <button
             onClick={handleSearch}
