@@ -7,7 +7,6 @@ const SearchBar = ({ onSearch, error }) => {
   const handleSearch = () => {
     if (username.trim()) {
       onSearch(username);
-      setHistory((previHistory) => [username, ...previHistory]);
       setUsername("");
     }
   };
